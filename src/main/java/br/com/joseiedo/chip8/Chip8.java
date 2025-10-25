@@ -133,6 +133,15 @@ public class Chip8 {
                     case 0x3: // 8XY3: XOR
                         V[X] = V[X] ^ V[Y];
                         break;
+                    case 0x4: // 8XY4: Add (with carry flag)
+                        int sum = V[X] + V[Y];
+                        if (sum > 0xFF) {
+                            V[0xF] = 1;
+                        } else {
+                            V[0xF] = 0;
+                        }
+                        V[X] = sum & 0xFF;
+                        break;
                 }
                 break;
             case 0xA000: // ANNN: Set index
