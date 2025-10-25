@@ -1,0 +1,312 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="5121ebb3-fd52-4776-b678-5949c8cb361b" name="Changes" comment="feat: add operation code conditionals">
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/copilot.data.migration.agent.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/joseiedo/chip8/Chip8.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/joseiedo/chip8/Chip8.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/joseiedo/chip8/Chip8Application.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/joseiedo/chip8/Chip8Application.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JUnit5 Test Class" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GoLibraries">
+    <option name="indexEntireGoPath" value="true" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="jar://$MAVEN_REPOSITORY$/org/openjfx/javafx-base/21.0.6/javafx-base-21.0.6-mac-aarch64.jar!/javafx/util/Duration.class" root0="SKIP_INSPECTION" />
+    <setting file="jar://$MAVEN_REPOSITORY$/org/openjfx/javafx-graphics/21.0.6/javafx-graphics-21.0.6-sources.jar!/javafx/animation/AnimationTimer.java" root0="SKIP_INSPECTION" />
+    <setting file="jar://$MAVEN_REPOSITORY$/org/openjfx/javafx-graphics/21.0.6/javafx-graphics-21.0.6-sources.jar!/javafx/application/Application.java" root0="SKIP_INSPECTION" />
+    <setting file="jar://$USER_HOME$/.sdkman/candidates/java/21.0.6-jbr/lib/src.zip!/java.base/java/io/PrintStream.java" root0="SKIP_INSPECTION" />
+    <setting file="jar://$USER_HOME$/.sdkman/candidates/java/21.0.6-jbr/lib/src.zip!/java.base/java/nio/file/Files.java" root0="SKIP_INSPECTION" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHomeTypeForPersistence" value="WRAPPER" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 2
+}</component>
+  <component name="ProjectId" id="34Vy6tyhNw7JcTRam9ChFo1owj1" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.Chip8.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Chip8Application.executor&quot;: &quot;Debug&quot;,
+    &quot;Application.HelloApplication.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Launcher.executor&quot;: &quot;Debug&quot;,
+    &quot;JUnit.All in chip8.executor&quot;: &quot;Run&quot;,
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.cidr.known.project.marker&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.go.formatter.settings.were.checked&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.go.migrated.go.modules.settings&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.readMode.enableVisualFormatting&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;cidr.known.project.marker&quot;: &quot;true&quot;,
+    &quot;com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultAutoModeForALLUsers.v1&quot;: &quot;true&quot;,
+    &quot;com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1&quot;: &quot;true&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit5&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5&quot;: &quot;&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;go.import.settings.migrated&quot;: &quot;true&quot;,
+    &quot;junie.onboarding.icon.badge.shown&quot;: &quot;true&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/iedo/Study/chip88/roms&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.editor&quot;,
+    &quot;to.speed.mode.migration.done&quot;: &quot;true&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="br.com.joseiedo.chip8" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/roms" />
+    </key>
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/assets" />
+      <recent name="$PROJECT_DIR$/roms" />
+    </key>
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="br.com.joseiedo.chip8" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Application.Chip8">
+    <configuration name="Chip8" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="br.com.joseiedo.chip8.Chip8" />
+      <module name="chip8" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="br.com.joseiedo.chip8.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Chip8Application" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="ALTERNATIVE_JRE_PATH" value="21" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
+      <option name="MAIN_CLASS_NAME" value="br.com.joseiedo.chip8.Chip8Application" />
+      <module name="chip88" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="br.com.joseiedo.chip8.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Launcher" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="ALTERNATIVE_JRE_PATH" value="21" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
+      <option name="MAIN_CLASS_NAME" value="br.com.joseiedo.chip8.Launcher" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="br.com.joseiedo.chip8.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="Babashka" factoryName="BabashkaLocalRepl" activateToolWindowBeforeRun="false">
+      <setting name="displayName" value="" />
+      <setting name="bbPath" value="" />
+      <setting name="parameters" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <setting name="workingDir" value="" />
+      <setting name="focusEditor" value="false" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="ClojureREPL" factoryName="Local" activateToolWindowBeforeRun="false">
+      <option name="configVersion" value="1" />
+      <option name="options" />
+      <option name="profiles" />
+      <method v="2" />
+    </configuration>
+    <configuration default="true" type="ClojureREPL" factoryName="Remote" activateToolWindowBeforeRun="false">
+      <setting name="displayName" value="" />
+      <setting name="host" value="" />
+      <setting name="port" value="0" />
+      <setting name="replType" value="SOCKET" />
+      <setting name="configType" value="SPECIFY" />
+      <setting name="replPortFileType" value="STANDARD" />
+      <setting name="customPortFile" value="" />
+      <setting name="fixLineNumbers" value="false" />
+      <setting name="useHeartbeat" value="true" />
+      <setting name="focusEditor" value="false" />
+      <setting name="urlFile" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="All in chip8" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="chip8" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="TEST_OBJECT" value="package" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Launcher" />
+        <item itemvalue="Application.Chip8Application" />
+        <item itemvalue="JUnit.All in chip8" />
+        <item itemvalue="Application.Chip8" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-9823dce3aa75-bf35d07a577b-intellij.indexing.shared.core-IU-252.26199.169" />
+        <option value="bundled-js-predefined-d6986cc7102b-9c94529fcfe0-JavaScript-IU-252.26199.169" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="5121ebb3-fd52-4776-b678-5949c8cb361b" name="Changes" comment="" />
+      <created>1761312863491</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1761312863491</updated>
+      <workItem from="1761312864700" duration="1383000" />
+      <workItem from="1761362205289" duration="24668000" />
+      <workItem from="1761424193693" duration="49000" />
+      <workItem from="1761424245006" duration="86000" />
+      <workItem from="1761424333010" duration="59000" />
+      <workItem from="1761424394122" duration="8000" />
+      <workItem from="1761424473247" duration="45000" />
+      <workItem from="1761424528433" duration="68000" />
+    </task>
+    <task id="LOCAL-00001" summary="feat: add initial version of chip8">
+      <option name="closed" value="true" />
+      <created>1761419987423</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1761419987423</updated>
+    </task>
+    <task id="LOCAL-00002" summary="feat: add initial working version of chip8">
+      <option name="closed" value="true" />
+      <created>1761420099681</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1761420099681</updated>
+    </task>
+    <task id="LOCAL-00003" summary="feat: use javafx as display framework">
+      <option name="closed" value="true" />
+      <created>1761421447134</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1761421447134</updated>
+    </task>
+    <task id="LOCAL-00004" summary="chore: remove some comments and unnecessary code">
+      <option name="closed" value="true" />
+      <created>1761421757429</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1761421757429</updated>
+    </task>
+    <task id="LOCAL-00005" summary="docs: add checklist">
+      <option name="closed" value="true" />
+      <created>1761422000949</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1761422000949</updated>
+    </task>
+    <task id="LOCAL-00006" summary="feat: add operation code conditionals">
+      <option name="closed" value="true" />
+      <created>1761423576735</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1761423576735</updated>
+    </task>
+    <task id="LOCAL-00007" summary="feat: add operation code conditionals">
+      <option name="closed" value="true" />
+      <created>1761423928552</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1761423928552</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="feat: add initial version of chip8" />
+    <MESSAGE value="feat: add initial working version of chip8" />
+    <MESSAGE value="feat: use javafx as display framework" />
+    <MESSAGE value="chore: remove some comments and unnecessary code" />
+    <MESSAGE value="docs: add checklist" />
+    <MESSAGE value="feat: add operation code conditionals" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: add operation code conditionals" />
+  </component>
+  <component name="VgoProject">
+    <integration-enabled>false</integration-enabled>
+    <settings-migrated>true</settings-migrated>
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/br/com/joseiedo/chip8/Display.java</url>
+          <line>21</line>
+          <option name="timeStamp" value="5" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>

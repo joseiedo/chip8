@@ -1,12 +1,12 @@
 package br.com.joseiedo.chip8;
 
-import java.io.IOException;
-
 import static br.com.joseiedo.chip8.Font.FONTSET;
 import static java.lang.System.arraycopy;
 import static java.nio.file.Files.readAllBytes;
 import static java.nio.file.Paths.get;
 import static java.util.Arrays.fill;
+
+import java.io.IOException;
 
 public class Chip8 {
 
@@ -72,6 +72,9 @@ public class Chip8 {
         int NN = opcode & 0x00FF;
         int NNN = opcode & 0x0FFF;
 
+        // I know... this switch is terrible.
+        // A map would be very beautiful for this, but it will consume more memory
+        // Sure, it's useless to worry about performance in this project, but I want to pretend I'm building something real >:(
         switch (opcode & 0xF000) {
             case 0x0000:
                 switch (N) {
@@ -90,17 +93,53 @@ public class Chip8 {
                 stack[sp++] = pc;
                 pc = NNN;
                 break;
+            case 0x3000: // 3XNN: Skip if VX == NN
+                if (V[X] == NN) {
+                    pc += 2;
+                }
+                break;
+            case 0x4000: // 4XNN: Skip if VX != NN.
+                if (V[X] != NN) {
+                    pc += 2;
+                }
+                break;
+            case 0x5000: // 5XY0: Skip if VX == VY.
+                if (V[X] == V[Y]) {
+                    pc += 2;
+                }
+                break;
+            case 0x9000: // 9XY0: Skip if VX != VY.
+                if (V[X] != V[Y]) {
+                    pc += 2;
+                }
+                break;
             case 0x6000: // 6XNN: Set
                 V[X] = NN & 0xFF;
                 break;
             case 0x7000: // 7XNN: Add
                 V[X] = (V[X] + NN) & 0xFF;
                 break;
+            case 0x8000: // 8XYN
+                switch (N) {
+                    case 0x0: // 8XY0: Set
+                        V[X] = V[Y];
+                        break;
+                    case 0x1: // 8XY1: OR
+                        V[X] = V[X] | V[Y];
+                        break;
+                    case 0x2: // 8XY2: AND
+                        V[X] = V[X] & V[Y];
+                        break;
+                    case 0x3: // 8XY3: XOR
+                        V[X] = V[X] ^ V[Y];
+                        break;
+                }
+                break;
             case 0xA000: // ANNN: Set index
                 I = NNN;
                 break;
             case 0xD000: // DXYN: Display
-                V[0xF] = 0;  // reset collision flag
+                V[0xF] = 0; // reset collision flag
                 for (int row = 0; row < N; row++) {
                     int spriteByte = memory[I + row];
                     for (int col = 0; col < 8; col++) {
@@ -121,7 +160,8 @@ public class Chip8 {
     }
 
     public void init() throws IOException {
-        byte[] program = readAllBytes(get("roms/2-ibm-logo.ch8"));
+        byte[] program = readAllBytes(get("roms/3-corax+.ch8"));
+        //byte[] program = readAllBytes(get("roms/2-ibm-logo.ch8"));
         //byte[] program = readAllBytes(get("roms/1-chip8-logo.ch8"));
         initialize(program);
     }

@@ -1,28 +1,19 @@
 package br.com.joseiedo.chip8;
 
-import javafx.animation.Animation;
+import static br.com.joseiedo.chip8.Display.HEIGHT;
+import static br.com.joseiedo.chip8.Display.WIDTH;
+
 import javafx.animation.AnimationTimer;
-import javafx.animation.KeyFrame;
-import javafx.animation.Timeline;
 import javafx.application.Application;
-import javafx.event.ActionEvent;
-import javafx.event.EventHandler;
 import javafx.scene.Scene;
 import javafx.scene.canvas.Canvas;
 import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.paint.Color;
 import javafx.stage.Stage;
-import javafx.util.Duration;
-
-import java.io.IOException;
-
-import static br.com.joseiedo.chip8.Display.HEIGHT;
-import static br.com.joseiedo.chip8.Display.WIDTH;
 
 public class Chip8Application extends Application {
 
     private static final int SCALE = 10;
-
 
     @Override
     public void start(Stage stage) throws Exception {
@@ -39,7 +30,8 @@ public class Chip8Application extends Application {
                 // Need to consider delta in the future, but I'm too lazy at the moment
                 chip8.emulateCycle();
             }
-        }.start();
+        }
+            .start();
 
         stage.setScene(scene);
         stage.setResizable(false);
