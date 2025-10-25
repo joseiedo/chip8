@@ -1,8 +1,6 @@
 package br.com.joseiedo.chip8;
 
-import java.util.Stack;
-
-public class Memory {
+public class Font {
 
     public static final byte[] FONTSET = new byte[]{
             (byte) 0xF0, (byte) 0x90, (byte) 0x90, (byte) 0x90, (byte) 0xF0, // 0

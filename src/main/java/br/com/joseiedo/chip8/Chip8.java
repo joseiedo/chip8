@@ -2,7 +2,7 @@ package br.com.joseiedo.chip8;
 
 import java.io.IOException;
 
-import static br.com.joseiedo.chip8.Memory.FONTSET;
+import static br.com.joseiedo.chip8.Font.FONTSET;
 import static java.lang.System.arraycopy;
 import static java.nio.file.Files.readAllBytes;
 import static java.nio.file.Paths.get;
@@ -14,7 +14,7 @@ public class Chip8 {
         this.display = display;
     }
 
-    private Display display = new Display();
+    private Display display;
     private int opcode;
 
     private byte[] memory = new byte[4096];
@@ -122,20 +122,8 @@ public class Chip8 {
     }
 
     public void init() throws IOException {
-        //initialize(program);
-    }
-
-    public static void main(String[] args) throws IOException {
-        //byte[] program = readAllBytes(get("roms/1-chip8-logo.ch8"));
-        byte[] program = readAllBytes(get("roms/2-ibm-logo.ch8"));
-        Display display1 = new Display();
-        Chip8 chip8 = new Chip8(display1);
-        chip8.initialize(program);
-        for (;;) {
-            chip8.emulateCycle();
-            try {
-                Thread.sleep(16); // ~60Hz
-            } catch (InterruptedException e) {}
-        }
+        //byte[] program = readAllBytes(get("roms/2-ibm-logo.ch8"));
+        byte[] program = readAllBytes(get("roms/1-chip8-logo.ch8"));
+        initialize(program);
     }
 }

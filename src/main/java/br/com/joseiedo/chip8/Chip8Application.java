@@ -24,24 +24,20 @@ public class Chip8Application extends Application {
     private static final int SCALE = 10;
 
 
-
     @Override
     public void start(Stage stage) throws Exception {
         Canvas canvas = new Canvas(WIDTH * SCALE, HEIGHT * SCALE);
         GraphicsContext gc = canvas.getGraphicsContext2D();
-        Display display = new Display();
+        Display display = new Display(screen -> render(gc, screen));
         Chip8 chip8 = new Chip8(display);
         chip8.init();
 
         Scene scene = new Scene(new javafx.scene.Group(canvas));
         new AnimationTimer() {
-            private long lastTimerUpdate = 0;
-
             @Override
             public void handle(long now) {
-                long lastTimerUpdate = System.nanoTime();
-                final double nsPerTick = 1_000_000_000.0 / 60; // 60 Hz
-                chip8.emulateCycle();   // fetch-decode-execute
+                // Need to consider delta in the future, but I'm too lazy at the moment
+                chip8.emulateCycle();
             }
         }.start();
 
@@ -50,22 +46,18 @@ public class Chip8Application extends Application {
         stage.setTitle("CHIP-8 Emulator");
         stage.show();
     }
-//
-//    private void render(GraphicsContext gc) {
-//        for (int y = 0; y < HEIGHT; y++) {
-//            for (int x = 0; x < WIDTH; x++) {
-//                int index = y * WIDTH + x;
-//                if (display.screen[index] == 1) {
-//                    gc.setFill(Color.WHITE);
-//                } else {
-//                    gc.setFill(Color.BLACK);
-//                }
-//                gc.fillRect(x * SCALE, y * SCALE, SCALE, SCALE);
-//            }
-//        }
-//    }
-//
-//    public static void main(String[] args) {
-//        launch(args);
-//    }
+
+    private void render(GraphicsContext gc, byte[] screen) {
+        for (int y = 0; y < HEIGHT; y++) {
+            for (int x = 0; x < WIDTH; x++) {
+                int index = y * WIDTH + x;
+                if (screen[index] == 1) {
+                    gc.setFill(Color.WHITE);
+                } else {
+                    gc.setFill(Color.BLACK);
+                }
+                gc.fillRect(x * SCALE, y * SCALE, SCALE, SCALE);
+            }
+        }
+    }
 }
