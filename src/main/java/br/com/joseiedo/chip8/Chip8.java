@@ -142,6 +142,32 @@ public class Chip8 {
                         }
                         V[X] = sum & 0xFF;
                         break;
+                    case 0x5: // 8XY5: Subtract X - Y (with carry)
+                        if (V[X] > V[Y]) {
+                            V[0xF] = 1;
+                        } else {
+                            V[0xF] = 0;
+                        }
+                        V[X] = (V[X] - V[Y]) & 0xFF;
+                        break;
+                    case 0x7: // 8XY7: Subtract Y - X (with carry)
+                        if (V[Y] > V[X]) {
+                            V[0xF] = 1;
+                        } else {
+                            V[0xF] = 0;
+                        }
+                        V[X] = (V[Y] - V[X]) & 0xFF;
+                        break;
+                    case 0x6: // 8XY6: Shift right
+                        int lastBit = V[Y] & 0x1; // 0x1 = 0001, the last bit :)
+                        V[X] = (V[Y] >> 1) & 0xFF;
+                        V[0xF] = lastBit;
+                        break;
+                    case 0xE: // 8XYE: Shift Left
+                        int firstBit = (V[Y] & 0x80) >> 7; // = 1000 0000 >> 7 = 0001, the first bit :)
+                        V[X] = (V[Y] << 1) & 0xFF;
+                        V[0xF] = firstBit;
+                        break;
                 }
                 break;
             case 0xA000: // ANNN: Set index
