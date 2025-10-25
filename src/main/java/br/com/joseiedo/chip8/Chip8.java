@@ -54,7 +54,6 @@ public class Chip8 {
     }
 
     private void fetchOpCode() {
-        // Mask with 0xFF to convert signed byte to unsigned (Java has no unsigned byte type)
         opcode = ((memory[pc] & 0xFF) << 8) | (memory[pc + 1] & 0xFF);
         pc += 2;
     }
@@ -122,8 +121,8 @@ public class Chip8 {
     }
 
     public void init() throws IOException {
-        //byte[] program = readAllBytes(get("roms/2-ibm-logo.ch8"));
-        byte[] program = readAllBytes(get("roms/1-chip8-logo.ch8"));
+        byte[] program = readAllBytes(get("roms/2-ibm-logo.ch8"));
+        //byte[] program = readAllBytes(get("roms/1-chip8-logo.ch8"));
         initialize(program);
     }
 }
