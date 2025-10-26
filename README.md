@@ -8,7 +8,7 @@ There is still a long path to go, but at least I can already see something
 
 - [x] 1-chip8-logo.ch8
 - [x] 2-ibm-logo.ch8
-- [ ] 3-corax+.ch8
+- [x] 3-corax+.ch8
 - [ ] 4-flags.ch8
 - [ ] 5-quirks.ch8
 - [ ] 6-keypad.ch8
