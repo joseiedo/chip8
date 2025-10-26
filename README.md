@@ -1,11 +1,10 @@
-# Chip 8 Emulator
+# Chip 8 Emulator (IN PROGRESS)
 
-There is still a long path to go, but at least I can already see something
-
-<img width="1504" height="920" alt="image" src="https://github.com/user-attachments/assets/1c5a9d01-d89a-4cc3-b070-f06f6a2b0a70" />
+<img width="752" height="460" alt="image" src="https://github.com/user-attachments/assets/04e3df26-7cbd-4189-acac-d7167c1b9dd5" />
 
 ## Working ROMs test-suite
-
+I love the guy who created this repo: 
+https://github.com/Timendus/chip8-test-suite?tab=readme-ov-file#community-response-
 - [x] 1-chip8-logo.ch8
 - [x] 2-ibm-logo.ch8
 - [x] 3-corax+.ch8
