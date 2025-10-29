@@ -1,6 +1,6 @@
 # Chip 8 Emulator (IN PROGRESS)
 
-<img width="1504" height="920" alt="image" src="https://github.com/user-attachments/assets/39af060a-fb13-420e-80c5-d65a1d62143b" />
+<img width="1504" height="920" alt="image" src="https://github.com/user-attachments/assets/e3a43112-a3df-42ed-a4fb-16553442e38a" />
 
 ## Working ROMs test-suite
 I love the guy who created this repo: 
