@@ -61,11 +61,9 @@ public class Chip8 {
     /* ---------------- Execution Loop ---------------- */
 
     public void emulateCycle() {
-        for (int i = 0; i < 10; i++) {
-            fetchOpCode();
-            decodeAndExecute();
-            display.render();
-        }
+        fetchOpCode();
+        decodeAndExecute();
+        display.render();
         timer.cycle();
     }
 
@@ -96,13 +94,21 @@ public class Chip8 {
             case 0x0000 -> handle0x0000();
             case 0x1000 -> programCounter.jump(NNN);
             case 0x2000 -> callSubroutine();
-            case 0x3000 -> { if (V[X] == NN) programCounter.next(); }
-            case 0x4000 -> { if (V[X] != NN) programCounter.next(); }
-            case 0x5000 -> { if (V[X] == V[Y]) programCounter.next(); }
+            case 0x3000 -> {
+                if (V[X] == NN) programCounter.next();
+            }
+            case 0x4000 -> {
+                if (V[X] != NN) programCounter.next();
+            }
+            case 0x5000 -> {
+                if (V[X] == V[Y]) programCounter.next();
+            }
             case 0x6000 -> V[X] = NN;
             case 0x7000 -> V[X] = (V[X] + NN) & 0xFF;
             case 0x8000 -> handle0x8000();
-            case 0x9000 -> { if (V[X] != V[Y]) programCounter.next(); }
+            case 0x9000 -> {
+                if (V[X] != V[Y]) programCounter.next();
+            }
             case 0xA000 -> I = NNN;
             case 0xB000 -> programCounter.jump(NNN + V[0]);
             case 0xC000 -> V[X] = random.nextInt(256) & NN;
@@ -156,8 +162,12 @@ public class Chip8 {
 
     private void handle0xE000() {
         switch (NN) {
-            case 0x9E -> { if (keypad.isKeyPressed(V[X])) programCounter.next(); }
-            case 0xA1 -> { if (!keypad.isKeyPressed(V[X])) programCounter.next(); }
+            case 0x9E -> {
+                if (keypad.isKeyPressed(V[X])) programCounter.next();
+            }
+            case 0xA1 -> {
+                if (!keypad.isKeyPressed(V[X])) programCounter.next();
+            }
             default -> unknownOpcode();
         }
     }
@@ -167,7 +177,10 @@ public class Chip8 {
             case 0x07 -> V[X] = timer.getDelayTimer();
             case 0x15 -> timer.setDelayTimer(V[X]);
             case 0x18 -> timer.setSoundTimer(V[X]);
-            case 0x1E -> { V[F] = (I + V[X] > 0xFFF) ? 1 : 0; I = (I + V[X]) & 0xFFFF; }
+            case 0x1E -> {
+                V[F] = (I + V[X] > 0xFFF) ? 1 : 0;
+                I = (I + V[X]) & 0xFFFF;
+            }
             case 0x0A -> keypad.getLastPressedKey().ifPresentOrElse(k -> V[X] = k, programCounter::back);
             case 0x29 -> I = FONT_SET_START + V[X] * 5;
             case 0x33 -> storeBCD();
@@ -213,7 +226,7 @@ public class Chip8 {
 
     private void storeBCD() {
         int value = V[X];
-        memory[I]     = (byte) (value / 100);
+        memory[I] = (byte) (value / 100);
         memory[I + 1] = (byte) ((value / 10) % 10);
         memory[I + 2] = (byte) (value % 10);
     }
@@ -223,7 +236,12 @@ public class Chip8 {
     }
 
     public void init() throws IOException {
-        byte[] program = readAllBytes(get("roms/3-corax+.ch8"));
+        //byte[] program = readAllBytes(get("roms/3-corax+.ch8"));
+        //byte[] program = readAllBytes(get("roms/6-keypad.ch8"));
+        //byte[] program = readAllBytes(get("roms/4-flags.ch8"));
+        //byte[] program = readAllBytes(get("roms/7-beep.ch8"));
+        byte[] program = readAllBytes(get("roms/9-pong.ch8"));
+
         initialize(program);
     }
 }
