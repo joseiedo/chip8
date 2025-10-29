@@ -11,5 +11,6 @@ https://github.com/Timendus/chip8-test-suite?tab=readme-ov-file#community-respon
 - [ ] 4-flags.ch8
 - [ ] 5-quirks.ch8
 - [ ] 6-keypad.ch8
-- [ ] 7-beep.ch8
+- [X] 7-beep.ch8
 - [ ] 8-scrolling.ch8
+- [X] 9-pong.ch8
