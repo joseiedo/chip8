@@ -4,14 +4,17 @@ import static br.com.joseiedo.chip8.Display.HEIGHT;
 import static br.com.joseiedo.chip8.Display.WIDTH;
 
 import javafx.animation.AnimationTimer;
+import javafx.animation.PauseTransition;
 import javafx.application.Application;
 import javafx.scene.Scene;
 import javafx.scene.canvas.Canvas;
 import javafx.scene.canvas.GraphicsContext;
+import javafx.scene.input.KeyEvent;
 import javafx.scene.paint.Color;
 import javafx.stage.Stage;
+import javafx.util.Duration;
 
-public class Chip8Application extends Application {
+public class JavaFXApplication extends Application {
 
     private static final int SCALE = 10;
 
@@ -20,18 +23,21 @@ public class Chip8Application extends Application {
         Canvas canvas = new Canvas(WIDTH * SCALE, HEIGHT * SCALE);
         GraphicsContext gc = canvas.getGraphicsContext2D();
         Display display = new Display(screen -> render(gc, screen));
-        Chip8 chip8 = new Chip8(display);
+        Keypad keypad = new Keypad();
+        Chip8 chip8 = new Chip8(display, keypad);
         chip8.init();
 
         Scene scene = new Scene(new javafx.scene.Group(canvas));
+        scene.addEventHandler(KeyEvent.KEY_PRESSED, (key) -> keypad.onKeyPressed(key.getCode()));
+        scene.addEventHandler(KeyEvent.KEY_RELEASED, (key) -> keypad.onKeyReleased(key.getCode()));
+
         new AnimationTimer() {
             @Override
             public void handle(long now) {
                 // Need to consider delta in the future, but I'm too lazy at the moment
                 chip8.emulateCycle();
             }
-        }
-            .start();
+        }.start();
 
         stage.setScene(scene);
         stage.setResizable(false);

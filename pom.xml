@@ -66,7 +66,7 @@
                         <!-- Default configuration for running with: mvn clean javafx:run -->
                         <id>default-cli</id>
                         <configuration>
-                            <mainClass>br.com.joseiedo.chip8/br.com.joseiedo.chip8.Chip8Application</mainClass>
+                            <mainClass>br.com.joseiedo.chip8/br.com.joseiedo.chip8.JavaFXApplication</mainClass>
                             <launcher>app</launcher>
                             <jlinkZipName>app</jlinkZipName>
                             <jlinkImageName>app</jlinkImageName>
