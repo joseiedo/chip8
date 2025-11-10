@@ -1,4 +1,7 @@
-# Chip 8 Emulator (IN PROGRESS)
+# Chip 8 Emulator
+
+This project goal was to have an introduction to EmuDev and have some fun. 
+Don't think this project is an ideal example. *it's not*.
 
 <img width="1504" height="920" alt="image" src="https://github.com/user-attachments/assets/e3a43112-a3df-42ed-a4fb-16553442e38a" />
 
